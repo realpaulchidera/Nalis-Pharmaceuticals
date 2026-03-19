@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-manrope: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-public-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Design System Colors */
+  --color-primary: #00478d;
+  --color-primary-container: #005eb8;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #c8daff;
+  
+  --color-secondary: #006b5b;
+  --color-secondary-container: #78f8dd;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #007261;
+
+  --color-tertiary: #224683;
+  --color-tertiary-container: #3d5e9d;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #cbd9ff;
+
+  --color-surface: #f7f9fb;
+  --color-surface-dim: #d8dadc;
+  --color-surface-bright: #f7f9fb;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f4f6;
+  --color-surface-container: #eceef0;
+  --color-surface-container-high: #e6e8ea;
+  --color-surface-container-highest: #e0e3e5;
+  
+  --color-on-surface: #191c1e;
+  --color-on-surface-variant: #424752;
+  --color-outline: #727783;
+  --color-outline-variant: #c2c6d4;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface text-on-surface font-public-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-manrope;
+  }
+}
+
+/* Custom Utilities for Design System */
+@utility backdrop-blur-md {
+  backdrop-filter: blur(12px);
+}
+
+@utility shadow-clinical {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
